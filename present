@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cake swank
+aquamacs project.clj
+open "Top Things to Learn From Clojure.pptx"
+
