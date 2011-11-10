@@ -10,7 +10,10 @@
 ;; Records works with common functions
 (filter #(= 2011 (:year %)) confs)
 (sort-by :name confs)
-(map :name confs)
+
+;; a String is a Seq, and Seqs can be counted
+;; Sort by the length of the name:
+(sort-by (fn [c] (count (:name c))) confs)
 
 ;; Fields can be added dynamically
 (assoc oredev :rating :great)
@@ -25,4 +28,6 @@
   (println property "->" value))
 
 
-
+(comment 
+  {:name "Øredev", :year 2011}
+  )
